@@ -1,7 +1,7 @@
 package ru.magev.moexagent.UI;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -21,5 +21,10 @@ public class MainActivity extends AppCompatActivity {
     {
         rcView=findViewById(R.id.recycleMainView);
         rcView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }
