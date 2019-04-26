@@ -1,23 +1,25 @@
 package ru.magev.moexagent.DataManipulation;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.widget.ImageView;
 
+import javax.inject.Inject;
+
+import ru.magev.moexagent.Common.StartApplication;
 import ru.magev.moexagent.R;
 
 public class ItemContainer {
 
-    private  Context context;
 
-    public ItemContainer(Context context)
+    protected Context context;
+    @Inject
+    StartApplication mStartApplication;
+
+    public ItemContainer()
     {
-        this.context=context;
+        this.context = mStartApplication.getApplicationContext();
     }
     public ImageView getImage() {
         return image;
