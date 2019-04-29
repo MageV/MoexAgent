@@ -12,12 +12,19 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import ru.magev.moexagent.DataManipulation.ItemContainer;
 import ru.magev.moexagent.R;
+import ru.magev.moexagent.UI.MainActivity;
 
 public class rowsetAdapters extends RecyclerView.Adapter<rowsetAdapters.rowsetViewHolder>{
 
     private List<ItemContainer> itemsList=new ArrayList<>();
+    @Inject
+    MainActivity mainActivity;
+
+
     @NonNull
     @Override
     public rowsetViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
